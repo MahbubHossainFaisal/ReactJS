@@ -19,7 +19,7 @@ const Footer = (props) =>{
                   <Link to="/menu">Menu</Link>
                 </li>
                 <li>
-                  <Link to="/contactus">Contact</Link>
+                  <Link to="/contactus">Contact Us</Link>
                 </li>
               </ul>
             </div>
