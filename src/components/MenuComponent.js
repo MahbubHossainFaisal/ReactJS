@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardImg, CardImgOverlay, CardText } from "reactstrap";
+import { Card, CardImg, CardImgOverlay, CardText, Breadcrumb, BreadcrumbItem} from "reactstrap";
 import {Link} from 'react-router-dom';
 
 
@@ -28,6 +28,12 @@ import {Link} from 'react-router-dom';
 
     return (
           <div className='container'>
+            <div className='row'>
+              <Breadcrumb>
+                <BreadcrumbItem> <Link to='/home'>Home</Link> </BreadcrumbItem>
+                <BreadcrumbItem active>Menu</BreadcrumbItem>
+              </Breadcrumb>
+            </div>
             <div className='row'>
               {menu}
             </div>
