@@ -1,6 +1,6 @@
 import React ,{Component} from 'react';
 import { Breadcrumb, BreadcrumbItem,
-            Button, Form, FormGroup, Label, Input, Col } from 'reactstrap';
+            Button, Form, FormGroup, Label, Input, Col, FormFeedback } from 'reactstrap';
 import {Link} from 'react-router-dom';
 
 
@@ -16,6 +16,12 @@ class Contact extends Component {
             agree:false,
             contactType: 'Tel.',
             message: '',
+            touched : {
+                 firstname:false,
+                 lastname:false,
+                 telnum:false,
+                 email:false,
+            }
         }
     }
 
@@ -34,6 +40,13 @@ class Contact extends Component {
         console.log("Current State is: " + JSON.stringify(this.state));
         alert("Current State is: " + JSON.stringify(this.state));
         event.preventDefault();
+    }
+
+    handleBlur = (field) => (event) => {
+
+        this.setState({
+            touched : { ...this.state.touched, [field] : true }
+        });
     }
 
    render(){
