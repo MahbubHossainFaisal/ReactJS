@@ -86,7 +86,8 @@ class Contact extends Component {
                             <Col md={10}>
                                 <Input type="text" id="firstname" name="firstname"
                                  placeholder="First Name" 
-                                 value={this.state.firstname} />
+                                 value={this.state.firstname} 
+                                 onChange={this.handleInputChange} />
                             </Col>
                                
                         </FormGroup>
@@ -96,7 +97,8 @@ class Contact extends Component {
                             <Col md={10}>
                                 <Input type="text" id="lastname" name="lastname"
                                  placeholder="Last Name" 
-                                 value={this.state.lastname} />
+                                 value={this.state.lastname}
+                                  onChange={this.handleInputChange} />
                             </Col>
                                
                         </FormGroup>
@@ -105,7 +107,8 @@ class Contact extends Component {
                             <Col md={10}>
                                 <Input type="tel" id="telnum" name="telnum"
                                  placeholder="Telephone Number" 
-                                 value={this.state.telnum} />
+                                 value={this.state.telnum}
+                                  onChange={this.handleInputChange} />
                             </Col>
                                
                         </FormGroup>
@@ -115,7 +118,8 @@ class Contact extends Component {
                             <Col md={10}>
                                 <Input type="text" id="email" name="email"
                                  placeholder="Email" 
-                                 value={this.state.email} />
+                                 value={this.state.email}
+                                  onChange={this.handleInputChange} />
                             </Col>
                                
                         </FormGroup>
@@ -125,14 +129,16 @@ class Contact extends Component {
                                 <FormGroup check>
                                     <Label check>
                                         <Input type="checkbox" name="agree"
-                                        checked={this.state.agree} />{" "}
+                                        checked={this.state.agree}
+                                         onChange={this.handleInputChange} />{" "}
                                         <strong>May we contact you?</strong>
                                     </Label>
                                 </FormGroup>
                             </Col>
                             <Col md={{size:3,offset:1}}>
                                 <Input type="select" name="contactType"
-                                value={this.state.contactType}>
+                                value={this.state.contactType}
+                                 onChange={this.handleInputChange} >
                                     <option>Tel.</option>
                                     <option>Email</option>
 
@@ -145,7 +151,8 @@ class Contact extends Component {
                             <Col md={10}>
                                 <Input type="textarea" id="message" name="message"
                                  row="12" 
-                                 value={this.state.message} />
+                                 value={this.state.message}
+                                  onChange={this.handleInputChange} />
                             </Col>
                                
                         </FormGroup>
