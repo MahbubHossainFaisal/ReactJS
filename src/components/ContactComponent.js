@@ -49,6 +49,40 @@ class Contact extends Component {
         });
     }
 
+    validate = (firstname,lastname,telnum,email) => {
+        const errors = {
+            firstname:'',
+            lastname:'',
+            telnum:'',
+            email:'',
+        };
+        if(this.state.touched.firstname && firstname.length < 3) {
+            errors.firstname = "First Name should be >= 3 characters!";
+        }
+        else if(this.state.touched.firstname && firstname.length > 10) {
+            errors.firstname = "First Name should be <= 10 characters!";
+        }
+        if(this.state.touched.lastname && lastname.length < 3) {
+            errors.lastname = "Last Name should be >= 3 characters!";
+        }
+        else if(this.state.touched.lastname && lastname.length > 10) {
+            errors.lastname = "Last Name should be <= 10 characters!";
+        }
+
+        const reg = /^\d+$/; //this is storing a regular expression which says that string only can contain numbers.
+
+        if(this.state.touched.telnum && !reg.test(telnum) && telnum.length===11){
+            errors.telnum = "Tel. number must contain only numbers";
+        }
+
+        if(this.state.touched.email && email.split('').filter(x=>x==='@').length!==1){
+            errors.email = "Email must contain @ ";
+        }
+         
+        return errors;
+
+    }
+
    render(){
         return(
         <div className="container">
