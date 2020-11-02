@@ -63,11 +63,11 @@ export class CommentForm extends Component {
                                         <Label htmlFor="rating">Rating</Label>
                                         <Col md={10}>
                                             <Control.select model=".rating" name="rating" className="form-control" >
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
+                                                <option> 1 </option>
+                                                <option> 2 </option>
+                                                <option> 3 </option>
+                                                <option> 4 </option>
+                                                <option> 5 </option>
                                             </Control.select>
                                         </Col>
                                     </Row>
