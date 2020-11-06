@@ -7,7 +7,7 @@ export const addComment = (dishId,rating,author,comment) =>({
         dishId : dishId,
         rating : rating,
         author : author,
-        comment : comment
+        comment : comment,
 
     }
 });
