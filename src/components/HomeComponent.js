@@ -1,6 +1,6 @@
 import React from "react";
 import {Card,CardImg,CardBody,CardTitle,CardText,CardSubtitle} from "reactstrap";
-import {Loading } from "./LoadingComponent";
+import { Loading } from "./LoadingComponent";
 
 function RenderCard ({item,isLoading,errMess}){
     if(isLoading) {
@@ -14,8 +14,8 @@ function RenderCard ({item,isLoading,errMess}){
             <h4>{errMess}</h4>
         );
     }
-    else
-    return(
+    else 
+        return(
         <Card>
             <CardImg src={item.image} alt={item.name} />
             <CardBody>
