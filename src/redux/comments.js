@@ -1,4 +1,4 @@
-import { COMMENTS } from "../shared/comments";
+
 import * as ActionTypes from './ActionTypes';
 
 
